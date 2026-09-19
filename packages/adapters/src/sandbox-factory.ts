@@ -18,7 +18,6 @@ export interface SandboxProviderOptions {
   daytonaApiKey?: string;
   daytonaApiUrl?: string;
   daytonaTarget?: string;
-  daytonaSnapshot?: string;
   createosApiKey?: string;
   createosBaseUrl?: string;
   createosShape?: string;
@@ -51,7 +50,6 @@ export function createSandboxProvider(kind: string, opts: SandboxProviderOptions
         apiKey: opts.daytonaApiKey,
         apiUrl: opts.daytonaApiUrl,
         target: opts.daytonaTarget,
-        snapshot: opts.daytonaSnapshot,
       });
     case "createos":
       if (!opts.createosApiKey?.trim())
